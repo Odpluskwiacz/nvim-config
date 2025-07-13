@@ -24,17 +24,14 @@ return{
 			vim.lsp.enable("clangd")
 			vim.lsp.config("clangd", {
 				cmd = {
-         		 		"clangd",
-          				"--background-index",
-          				"--pch-storage=memory",
-          				"--all-scopes-completion",
-          				"--pretty",
-          				"--header-insertion=never",
-          				"-j=4",
-          				"--inlay-hints",
-          				"--header-insertion-decorators",
-          				"--function-arg-placeholders",
-          				"--completion-style=detailed",
+					"clangd",
+					"--background-index",
+					"--clang-tidy",
+					"--clang-tidy-checks=readability-*,modernize-*,-modernize-use-trailing-return-type",
+					"--fallback-style=file",
+					"--header-insertion=never",
+					"--compile-commands-dir=.",
+					"--query-driver=**",
 				},
 			})
 			vim.lsp.enable("lua_ls")
