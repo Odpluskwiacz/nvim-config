@@ -1,4 +1,4 @@
-## TODO 
+# TODO 
 - [ ] Expand Keymaps ( title:"You Don't Need Plugins: A NeoVim Config for Minimalists" )
 - [ ] Learn clangd
 - [ ] Redo :Tutor
@@ -6,6 +6,9 @@
 - [ ] add LSP for Markdown
 - [ ] Learn tabs XD
 - [ ] Add Copy & Paste out side vim
+- [X] ClippBoard
+
 
 ## Motions
-- [ ] (C-w) + h,j,k,l Switch open panels
+(C-w) + h,j,k,l Switch open panels
+

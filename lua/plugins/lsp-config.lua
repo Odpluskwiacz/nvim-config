@@ -1,6 +1,6 @@
 return{
 	{
-		"williamboman/mason.nvim",
+		"mason-org/mason.nvim",
 		config = function()
 			require("mason").setup()
 		end
@@ -21,21 +21,10 @@ return{
 
 		"neovim/nvim-lspconfig",
 		config = function()
-			vim.lsp.enable("clangd")
-			vim.lsp.config("clangd", {
-				cmd = {
-					"clangd",
-					"--background-index",
-					"--clang-tidy",
-					"--clang-tidy-checks=readability-*,modernize-*,-modernize-use-trailing-return-type",
-					"--fallback-style=file",
-					"--header-insertion=never",
-					"--compile-commands-dir=.",
-					"--query-driver=**",
-				},
-			})
-			vim.lsp.enable("lua_ls")
-			vim.lsp.enable("pylsp")
+      local lspconfig = require("lspconfig")
+      lspconfig.clangd.setup({})
+      lspconfig.pylsp.setup({})
+      lspconfig.lua_ls.setup({})
 		end
 	}
 }
