@@ -1,24 +1,29 @@
-# Moje NVIM Config
-zależy mi na jak najmniejszej liczbie pobieranych pluginów itp.
-aktualnie walcze z LSP żeby działało tak jak mi się podoba
+# Moje NVIM Config  
+zależy mi na jak najmniejszej liczbie pobieranych pluginów itp.  
+aktualnie walcze z LSP żeby działało tak jak mi się podoba  
 
 ## Nowe Key bindy do LSP
-LSP keybinds
-map("n", "gd", vim.lsp.buf.definition)
-map("n", "K", vim.lsp.buf.hover)
-map("n", "<leader>rn", vim.lsp.buf.rename)
-map("n", "<leader>ca", vim.lsp.buf.code_action)
-map("n", "gr", vim.lsp.buf.references)
-map("n", "<leader>f", function()
+LSP keybinds  
+map("n", "gd", vim.lsp.buf.definition)  
+map("n", "K", vim.lsp.buf.hover)  
+map("n", "<leader>rn", vim.lsp.buf.rename)  
+map("n", "<leader>ca", vim.lsp.buf.code_action)  
+map("n", "gr", vim.lsp.buf.references)  
+
+#### /f FORMATOWANIE KODU OP!!  
+map("n", "<leader>f", function()  
+
+#### Find and Replace
+:%s/old_text/new_text/g
 
 
-Ctrl - C (copy works)
+Ctrl - C (copy works)  
 
-## Architektura
+## Architektura  
 
-* init.lua
-|
-|-lua
-    |
-    options.lua # bezpluginowa configuracja
-    keymaps.lua # Własne skróty klawiszowe
+* init.lua  
+|  
+|-lua  
+    |  
+    options.lua # bezpluginowa configuracja  
+    keymaps.lua # Własne skróty klawiszowe  

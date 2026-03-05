@@ -24,6 +24,7 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+-- wrzucic do keymaps
 -- Pokazuje pełny opis błędu
 vim.diagnostic.config({
   virtual_text = {
@@ -35,8 +36,13 @@ vim.diagnostic.config({
   update_in_insert = false,
   severity_sort = true,
 })
-
-
+-- wrzucic do keymap
+-- Auto hover
+vim.api.nvim_create_autocmd("CursorHold", {
+  callback = function()
+    vim.lsp.buf.hover()
+  end,
+})
 
 
 
