@@ -11,3 +11,6 @@ end)
 
 -- Kopiowanie do [Ctrl-C]
 vim.keymap.set('v', '<C-c>', '"+y', { noremap = true, silent = true })
+-- Szybki make pod <F5>
+vim.keymap.set('n', '<F5>', '<cmd>w<CR><cmd>!make<CR>', { noremap = true, silent = true })
+
